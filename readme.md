@@ -12,11 +12,12 @@ We implemented 2 baseline approaches:
 After getting the data, we have pre-processed the data and extracted the essential parameters like title, description, keywords and text of every news article. Then using the sentence transformer(sentence-transformers/all-MiniLM-L6-v2), by which we can capture the sematic information of the text in the news article and also combined with extracted features like description, title and keywords.From this we get the sentence embeddings for the text to be compared. Then we used the cosine similarity function on sentence embeddings to find the text similarity score.
     
 
-
 ### b.Siamese Architecture:
-We implemented a Siamese Architecture inspired by [1] to predict the news similarity scores. 
-# The dataPrepare.py takes the crawled data and puts it in one json (list of dict). MLNS_Siamese_roberta.ipynb implements the model to get predictions.
-#   We used xlm-roberta-base for tokenization and modeling.
+We implemented a Siamese Architecture inspired by [1] to predict the news similarity scores. \
+The dataPrepare.py takes the crawled data and puts it in one json (list of dict). MLNS_Siamese_roberta.ipynb implements the model to get predictions. \
+We used xlm-roberta-base for tokenization and modeling.
+
+
 ## 4.Findings:       
 In our first baseline model, On comparing our data with the Overall similarity score from the annotated data, the intial mean difference with cosine similarities was much greater than zero. 
 Then by experimenting using the different parameters of the meta data like  title, description and keywords, by assigning different weights to parameters resulted in the better similarity scores when compared to the intial result.
