@@ -30,10 +30,9 @@ We believe that on further optimization we can achieve the similarity scores whi
 \
 We started exploring using the bert and other models, since the scores were not upto the mark, we will be fine tuning the other models on the train data. 
 
-
-
 ## 5.Comparision with Original scope document:
-(yash)
+In the scope documentation we have mentioned that we will make our baseline model by 15th october, and we have made 2 baseline models, we will be exploring some more models and architectures to come up with our final model, It will be completed in the mentioned time frame.
+
 
 ## References:
 [1] Sagar Joshi, Dhaval Taunk, and Vasudeva Varma. 2022. IIIT-MLNS at SemEval-2022 Task 8: Siamese Architecture for Modeling Multilingual News Similarity. In Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022), pages 1145–1150, Seattle, United States. Association for Computational Linguistics.
