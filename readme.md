@@ -9,7 +9,7 @@ We implemented 2 baseline approaches:
 
 2) We implemented a Siamese Architecture inspired by [1] to predict the news similarity scores.
     dataPrepare.py takes the crawled data and puts it in one json (list of dict)
-    MLNS_bert_base.ipynb implements the model to get predictions.
+    MLNS_Siamese_roberta.ipynb implements the model to get predictions.
         We used xlm-roberta-base for tokenization and modeling.
 
 Reference:
