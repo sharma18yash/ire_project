@@ -14,8 +14,9 @@ After getting the data, we have pre-processed the data and extracted the essenti
 
 
 ### b.Siamese Architecture:
-We implemented a Siamese Architecture inspired by [1] to predict the news similarity scores. The dataPrepare.py takes the crawled data and puts it in one json (list of dict). MLNS_Siamese_roberta.ipynb implements the model to get predictions.
-        We used xlm-roberta-base for tokenization and modeling.
+We implemented a Siamese Architecture inspired by [1] to predict the news similarity scores. 
+# The dataPrepare.py takes the crawled data and puts it in one json (list of dict). MLNS_Siamese_roberta.ipynb implements the model to get predictions.
+#   We used xlm-roberta-base for tokenization and modeling.
 ## 4.Findings:       
 In our first baseline model, On comparing our data with the Overall similarity score from the annotated data, the intial mean difference with cosine similarities was much greater than zero. 
 Then by experimenting using the different parameters of the meta data like  title, description and keywords, by assigning different weights to parameters resulted in the better similarity scores when compared to the intial result.
