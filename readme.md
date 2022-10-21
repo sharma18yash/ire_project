@@ -5,7 +5,7 @@
 Since the task is from semeval 2021, we got the got data which contains links for the news articles and overall similarity score in a csv file. Then by using the [downloader provided](https://github.com/euagendas/semeval_8_2022_ia_downloader) we have crawlled the web pages and then from the files crawled we have managed to extract the required data in json format. From which we can further extract the required features.  
 
 ## 3.Methodologies Implemented:
-
+### [GITHUB LINK](https://github.com/sharma18yash/ire_project) 
 We implemented 2 baseline approaches:
 
 ### a. Using Sentence transformer model:
