@@ -1,5 +1,7 @@
 ## 1.Task Description.
-(yash)
+Given a pair of news articles, predict if they are covering the same news story.
+Develop a system that identifies multilingual news articles that provide similar information.
+It is a document-level similarity task in the applied domain of news articles, rating them pairwise on a 4-point scale from most to least similar.
 
 ## 2.Data Crawling:
 Since the task is from semeval 2021, we got the got data which contains links for the news articles and overall similarity score in a csv file. Then by using the [downloader provided](https://github.com/euagendas/semeval_8_2022_ia_downloader) we have crawlled the web pages and then from the files crawled we have managed to extract the required data in json format. From which we can further extract the required features.  
