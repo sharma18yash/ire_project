@@ -1,6 +1,8 @@
 ## 1.Task Description.
 Given a pair of news articles, predict if they are covering the same news story.
+\
 Develop a system that identifies multilingual news articles that provide similar information.
+\
 It is a document-level similarity task in the applied domain of news articles, rating them pairwise on a 4-point scale from most to least similar.
 
 ## 2.Data Crawling:
