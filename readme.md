@@ -34,6 +34,10 @@ Used data augmentation to increase training data. Data augmentation was done by 
 
 
 # 4.Results:       
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 We got the best result using DistilBERT along with meta data to train our model which achieved a test PCC of 0.2973.
 
 
@@ -42,3 +46,5 @@ We got the best result using DistilBERT along with meta data to train our model 
 [1] Sagar Joshi, Dhaval Taunk, and Vasudeva Varma. 2022. IIIT-MLNS at SemEval-2022 Task 8: Siamese Architecture for Modeling Multilingual News Similarity. In Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022), pages 1145–1150, Seattle, United States. Association for Computational Linguistics.
 \
 [2] SemEval-2022 Task 8: Multilingual news article similarity  https://aclanthology.org/2022.semeval-1.155.pdf
+\
+[3] Xu, Z., Yang, Z., Cui, Y., & Chen, Z. (2022, July). HFL at SemEval-2022 task 8: A linguistics-inspired regression model with data augmentation for multilingual news similarity. In Proceedings of the 16th international workshop on semantic evaluation (semeval-2022) (pp. 1114–1120). Seattle, United States: Association for Computational Linguistics.
