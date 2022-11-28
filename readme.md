@@ -32,12 +32,21 @@ Used Metadata along with news text as input. Used dislitBert as encoder and for 
 ### DB_A
 Used data augmentation to increase training data. Data augmentation was done by randomly jumbling up sentences  in the news articles. 4 times the original data was create in this way. Code for the data creation is in data_augmentation.ipynb . Used dislitBert as encoder and for tokenization. Training code is in data-augmentation.xpynb
 
+### DB_A
+Since we had twice the test data as the training data. We performed a experiment where we combined all the d and split it into train, validation and test in 70:15:15 split. Used the base model on this split.
+
 
 # 4.Results:       
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| EXPERIMENT  | DEV. PCC | TEST PCC |
+| ------------- | ------------- | ------------- |
+| DB  | 0.4257 | 0.2817 |
+| XRB  | 0.4278 | 0.2958 |
+| DB_M  | 0.4705 | 0.2973 |
+| DB_A  | 0.9608 | 0.2458 |
+| DB_ML  | 0.4310 | 0.2389 |
+| DB_S  | 0.449 | 0.405 |
+
+\
 We got the best result using DistilBERT along with meta data to train our model which achieved a test PCC of 0.2973.
 
 
