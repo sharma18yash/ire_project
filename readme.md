@@ -10,7 +10,7 @@ Since the task is from semeval 2021, we got the got data which contains links fo
 
 # 3.System Description:
 
-## Base model using Siamese Architecture:
+## Base model using Siamese Architecture (DB):
 We implemented a Siamese Architecture inspired by [1] to predict the news similarity scores. \
 The dataPrepare.py takes the crawled data and puts it in one json (list of dict). \
 
@@ -18,13 +18,10 @@ MLNS_Siamese_dislitBert.ipynb implements the baseline model to get predictions. 
 We used xlm-roberta-base for tokenization and modeling.
 
 ## Other models:
-We did 4 other experiments keeping the architecture same as follows:
+We did 5 other experiments keeping the same Siamese Architecture  as follows:
 
 ### XRB
 Used XLM-RoBERTa as encoder and for tokenization. Code is in MLNS_Siamese_roberta.ipynb
-
-### DB ML
-Used dislitBert as encoder and for tokenization. Some extra labels were provided along with the training data, like similarity of geography and time. We used them for multilabel Learning, in the training phase, but for testing we pridicted only the similarity score. Code is in MLNS_Siamese_dislitBert_multilable.ipynb
 
 ### DB_M
 Used Metadata along with news text as input. Used dislitBert as encoder and for tokenization. Code is in MLNS_Siamese_dislitBert_Meta.ipynb
@@ -32,7 +29,10 @@ Used Metadata along with news text as input. Used dislitBert as encoder and for 
 ### DB_A
 Used data augmentation to increase training data. Data augmentation was done by randomly jumbling up sentences  in the news articles. 4 times the original data was create in this way. Code for the data creation is in data_augmentation.ipynb . Used dislitBert as encoder and for tokenization. Training code is in data-augmentation.xpynb
 
-### DB_A
+### DB_ML
+Used dislitBert as encoder and for tokenization. Some extra labels were provided along with the training data, like similarity of geography and time. We used them for multilabel Learning, in the training phase, but for testing we pridicted only the similarity score. Code is in MLNS_Siamese_dislitBert_multilable.ipynb
+
+### DB_S
 Since we had twice the test data as the training data. We performed a experiment where we combined all the d and split it into train, validation and test in 70:15:15 split. Used the base model on this split.
 
 
