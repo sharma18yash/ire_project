@@ -1,4 +1,4 @@
-## 1.Task Description.
+# 1.Task Description.
 Given a pair of news articles, predict if they are covering the same news story.
 \
 Develop a system that identifies news articles in multiple languages that provide similar information.
