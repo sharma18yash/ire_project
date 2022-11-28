@@ -1,25 +1,32 @@
 ## 1.Task Description.
 Given a pair of news articles, predict if they are covering the same news story.
 \
-Develop a system that identifies multilingual news articles that provide similar information.
+Develop a system that identifies news articles in multiple languages that provide similar information.
 \
 It is a document-level similarity task in the applied domain of news articles, rating them pairwise on a 4-point scale from most to least similar.
 
 ## 2.Data Crawling:
 Since the task is from semeval 2021, we got the got data which contains links for the news articles and overall similarity score in a csv file. Then by using the [downloader provided](https://github.com/euagendas/semeval_8_2022_ia_downloader) we have crawlled the web pages and then from the files crawled we have managed to extract the required data in json format. From which we can further extract the required features.  
 
-## 3.Methodologies Implemented:
-### [GITHUB LINK](https://github.com/sharma18yash/ire_project) 
-We implemented 2 baseline approaches:
+## 3.System Description:
 
-### a. Using Sentence transformer model:
-After getting the data, we have pre-processed the data and extracted the essential parameters like title, description, keywords and text of every news article. Then using the sentence transformer(sentence-transformers/all-MiniLM-L6-v2), by which we can capture the sematic information of the text in the news article and also combined with extracted features like description, title and keywords.From this we get the sentence embeddings for the text to be compared. Then we used the cosine similarity function on sentence embeddings to find the text similarity score.
-    
-
-### b.Siamese Architecture:
+### Base model using Siamese Architecture:
 We implemented a Siamese Architecture inspired by [1] to predict the news similarity scores. \
-The dataPrepare.py takes the crawled data and puts it in one json (list of dict). MLNS_Siamese_roberta.ipynb implements the model to get predictions. \
+The dataPrepare.py takes the crawled data and puts it in one json (list of dict). \
+
+MLNS_Siamese_dislitBert.ipynb implements the baseline model to get predictions. It uses dislitBert as encoder and for tokenization.\
 We used xlm-roberta-base for tokenization and modeling.
+
+### Other models:
+We did 4 other experiments keeping the architecture same as follows:
+
+#### Used XLM-RoBERTa as encoder and for tokenization. Code is in MLNS_Siamese_roberta.ipynb
+
+#### Used dislitBert as encoder and for tokenization. Some extra labels were provided along with the training data, like similarity of geography and time. We used them for multilabel training, in the training phase, but for testing we pridicted only the similarity score. Code is in MLNS_Siamese_dislitBert_multilable.ipynb
+
+#### Used Metadata along with news text as input. Used dislitBert as encoder and for tokenization. Code is in MLNS_Siamese_dislitBert_Meta.ipynb
+
+#### Used data augmentation to increase training data. Data augmentation was done by randomly jumbling up sentences  in the news articles. 4 times the original data was create in this way. Code for the data creation is in data_augmentation.ipynb . Used dislitBert as encoder and for tokenization. Training code is in data-augmentation.xpynb
 
 
 ## 4.Findings:       
